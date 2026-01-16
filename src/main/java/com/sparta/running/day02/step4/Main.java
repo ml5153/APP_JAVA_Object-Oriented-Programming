@@ -31,15 +31,17 @@ public class Main {
 
         System.out.println("==== 숫자 리스트에서 짝수만 필터링");
         List<Integer> integerList = List.of(1, 2, 3, 4, 5, 6, 7, 8, 99, 88, 34);
-
-        List<Integer> filter1 = filter(integerList, n -> n % 2 == 0);
+        List<Integer> filter1 = FilterApples.filter(
+                integerList,
+                n -> n % 2 == 0
+        );
         System.out.println("filter1 = " + filter1);
         System.out.println("==== 음식 리스트에서 3글자 음식만 필터링");
 
-        List<String> filter2 = filter(List.of("짜장면", "치킨", "족발", "탕수육", "오렌지"), str -> str.length() == 3);
+        List<String> filter2 = FilterApples.filter(List.of("짜장면", "치킨", "족발", "탕수육", "오렌지"), str -> str.length() == 3);
         System.out.println("filter2 = " + filter2);
 
-        List<Apple> filter3 = filter(appleBasket, a -> a.getColor() == RED || a.getColor() == YELLOW);
+        List<Apple> filter3 = FilterApples.<Apple>filter(appleBasket, a -> a.getColor() == RED || a.getColor() == YELLOW);
         filter3.forEach(System.out::println);
     }
 }
