@@ -7,6 +7,10 @@ public class HamburgerChef {
     // 전략패턴은 변경이필요해서 final은 안함
     // HamburgerChef 는 레시피를 가지고있어!!!
     private BurgerRecipe recipe;
+    public HamburgerChef(BurgerRecipe recipe) {
+        this.recipe = recipe;
+    }
+
 
     // 전략변경 메서드 (setter)
     public void setRecipe(BurgerRecipe recipe) {

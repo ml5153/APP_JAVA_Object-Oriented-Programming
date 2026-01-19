@@ -4,10 +4,12 @@ import com.sparta.running.day02.step1.BurgerRecipe;
 
 public class Main {
     public static void main(String[] args) {
-        HamburgerChef hamburgerChef = new HamburgerChef();
+        HamburgerChef hamburgerChef = new HamburgerChef(() -> System.out.println("# 겁나 매운 할라피22뇨, 청양고추, 불닭소스 집어넣는다.")
+        );
+        hamburgerChef.makeBurger();
 
-        // 클래스가 폭발하는 단점이있으니 익명클래스로 구현해보자!!
-        // {} : 이게 익명클래스였다!!, 어나니머스 클래스
+//         클래스가 폭발하는 단점이있으니 익명클래스로 구현해보자!!
+//         {} : 이게 익명클래스였다!!, 어나니머스 클래스
         BurgerRecipe spicyRecipe = new BurgerRecipe() {
             // 익명클래스영역
             @Override
